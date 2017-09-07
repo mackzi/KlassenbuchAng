@@ -1,0 +1,29 @@
+<div id="header" class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+  <header class="mdl-layout__header">
+    <div class="mdl-layout__header-row">
+	<span>Login</span>
+    </div>
+  </header>
+</div>
+
+<div class="login" id = "logfield" align = "center">
+    <h1>Klassenbuch</h1>
+    <p>
+    Geben Sie Ihren Benutzernamen <br>
+    und Ihr Passwort ein:
+    </p>
+	<form action="#">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="text" id="name" [(ngModel)]="user.name">
+        <label class="mdl-textfield__label" for="name">Benutzername</label>
+        </div>
+    </form>
+    <form action="#">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+        <input class="mdl-textfield__input" type="password" id="password" [(ngModel)]="user.password">
+        <label class="mdl-textfield__label" for="password">Passwort</label>
+        </div>
+    </form>
+    <span>{{errorMsg}}</span>
+    <button class="mdl-button mdl-js-button mdl-button--raised" (click)="login()" type = "submit" id = "login" name = "login"> Los </button> <br>
+</div>
